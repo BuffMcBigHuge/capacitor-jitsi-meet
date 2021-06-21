@@ -1,4 +1,4 @@
-import { WebPlugin } from '@capacitor/core';
+import { WebPlugin, registerPlugin } from '@capacitor/core';
 import { JitsiPlugin } from './definitions';
 
 export class JitsiWeb extends WebPlugin implements JitsiPlugin {
@@ -50,5 +50,4 @@ const Jitsi = new JitsiWeb();
 export { Jitsi };
 
 // Register as a web plugin
-import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(Jitsi);
+registerPlugin(Jitsi);
